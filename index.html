@@ -1,49 +1,58 @@
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
+       <link rel="stylesheet" type="text/css" href="/css/style.css">
        <title>Welcome to prince of burgers</title>
        <meta charset="utf-8"/>
+        
    </head>
 
    <body>
     <header>
-       <h1>Prince of burgers</h1> <!-- this is how u comment code--> 
+       
+        <img src="/img/many.png" id="top">
+         <h1 id="hello">Prince of burgers</h1> <!-- this is how u comment code--> 
     </header>
-    <section id="burger selection">
+    
+    <section id="burger">
        <h2>Select the burger of your choice</h2> 
        <p>All of our burgers are made on order from 100% grass fed beef (or wild caught fish)</p>
        
-       <div style="display: inline-block">
-               <h3>The Massive burger</h3>
-       <img src="/img/massive.jpg" alt="massive burger" title="The Massive Burger" style="width:400px">
-       <ul>
-        <li>1kg beef patties</li>
-        <li>A whole bunch of cheese</li>
-        <li>May or may not contain gluten</li>
-       </ul>
-       </div>
-       
-       <div style="display: inline-block">
-               <h3>The fishy burger</h3>
-       <img src="/img/fishy.jpg" alt="fishy burger" title="The Fishy Burger" style="width:400px">
-       <ul>
-        <li>Fish of the day</li>
-        <li>Carrots and stuff</li>
-        <li>Probably contains gluten</li>
-       </ul>
-       </div>
-       
-       <div style="display: inline-block">
-               <h3>The plain old burger</h3>
-       <img src="/img/plain.jpg" alt="plain burger" title="The plain old Burger" style="width:400px">
-       <ul>
-        <li>200g beef patty</li>
-        <li>One slice of cheese</li>
-        <li>Contains gluten</li>
-       </ul>
-       </div>
+        <div class="wrapper">
+            <div class="box a">
+                <h3>The Massive burger</h3>
+                <img src="/img/massive.jpg" alt="massive burger" title="The Massive Burger" style="width:400px">
+
+                <ul  class="ingredients">
+                    <li>1kg beef patties</li>
+                    <li>A whole bunch of cheese</li>
+                    <li class="alergens">May or may not contain gluten</li>
+                </ul>
+            </div>
+            
+            <div class="box b">
+                <h3>The fishy burger</h3>
+                <img src="/img/fishy.jpg" alt="fishy burger" title="The Fishy Burger" style="width:400px">
+                <ul  class="ingredients">
+                    <li>Fish of the day</li>
+                    <li>Carrots and stuff</li>
+                    <li class="alergens">Probably contains gluten</li>
+                </ul>
+            </div>
+            
+            <div class="box c">
+                <h3>The plain old burger</h3>
+                <img src="/img/plain.jpg" alt="plain burger" title="The plain old Burger" style="width:400px">
+                <ul class="ingredients">
+                    <li>200g beef patty</li>
+                    <li>One slice of cheese</li>
+                    <li class="alergens">Contains gluten</li>
+                </ul>
+            </div>
+        </div>
+    
     </section>
-    <section id="delivery details">
+    <section id="delivery">
         <h2>Delivery details</h2>
         <p>As of now, we only deliver to adresses in Uppsala, Sweden</p>
         <form>
