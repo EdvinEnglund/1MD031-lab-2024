@@ -12,7 +12,8 @@
     <section class="wrapper">
       <Burger v-for="burger in burgers"
             v-bind:burger="burger" 
-            v-bind:key="burger.name"/>
+            v-bind:key="burger.name"
+            v-on:orderedBurger="addToOrder($event)"/>
     </section>       
 
    
@@ -105,10 +106,16 @@ export default {
   },
   data: function () {
     return {
-      burgers: menu
+      burgers: menu,
+      orderedBurgers: {}
     }
   },
   methods: {
+    addToOrder: function (event) {
+    this.orderedBurgers[event.name] = event.amount;
+    console.log("orderedBurger", this.orderedBurgers);
+    },
+
     printOrderData() {
       console.log("Full Name:", this.fullname);
       console.log("Email:", this.email);
