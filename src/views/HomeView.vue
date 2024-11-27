@@ -39,6 +39,22 @@
                <input v-model="houseno" id="houseno" required="required" placeholder="House number">
            </p>
 
+<!-- LOOK HERE -->
+           <div id="mapWrap">
+            <div id="map" v-on:click="setLocation" style="position: relative;">
+                    <div v-bind:style="{ 
+                        position: 'absolute', 
+                        left: location.x + 'px', 
+                        top: location.y + 'px', 
+                        width: '10px', 
+                        height: '10px', 
+                    }">
+                    T
+                    </div>
+                </div>
+          </div>
+
+
            <p>
                <label for="method">Payment method</label><br>
                <select id="method" v-model="paymentMethod">
@@ -61,10 +77,10 @@
             <input type="radio" id="none" name="gender" value="none" v-model="picked">
             <label for="none">None of your business</label><br>
        </form>
-       <button type="submit" v-on:click="printOrderData">
+       <button type="submit" v-on:click="addOrder">
            <img src="/img/shop.png" style="width:20px">
            Place order
-         </button>
+        </button>
    </section>
    <hr>
    <footer>
@@ -107,10 +123,22 @@ export default {
   data: function () {
     return {
       burgers: menu,
-      orderedBurgers: {}
+      orderedBurgers: {},
+      location: { x: 0,
+                  y: 0
+      },
     }
   },
   methods: {
+    setLocation(event) {
+      var offset = {
+        x: event.currentTarget.getBoundingClientRect().left,
+        y: event.currentTarget.getBoundingClientRect().top,
+      }  
+      this.location = {x: event.clientX - 10 - offset.x,
+                       y: event.clientY - 10 - offset.y};
+    },
+    
     addToOrder: function (event) {
     this.orderedBurgers[event.name] = event.amount;
     console.log("orderedBurger", this.orderedBurgers);
@@ -131,9 +159,9 @@ export default {
       var offset = {x: event.currentTarget.getBoundingClientRect().left,
                     y: event.currentTarget.getBoundingClientRect().top};
       socket.emit("addOrder", { orderId: this.getOrderNumber(),
-                                details: { x: event.clientX - 10 - offset.x,
-                                           y: event.clientY - 10 - offset.y },
-                                orderItems: ["Beans", "Curry"]
+                                details: { x: this.location.x,
+                                           y: this.location.y},
+                                orderItems: this.orderedBurgers
                               }
                  );
     }
@@ -220,5 +248,18 @@ body {
     background-color: #ff7000;
     color: white
  }
+
+ #map {
+  background: url("/img/polacks.jpg");  
+  width: 1920px;
+  height: 1078px;
+  }
+#mapWrap {
+overflow: scroll;
+height: 400px;
+width: 400px;
+
+}
+
 
 </style>
