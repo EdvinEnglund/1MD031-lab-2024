@@ -1,108 +1,146 @@
 <!DOCTYPE HTML>
 <html lang="en">
-   <head>
-       <link rel="stylesheet" type="text/css" href="/css/style.css">
-       <title>Welcome to prince of burgers</title>
-       <meta charset="utf-8"/>
-        
-   </head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Welcome to Prince of Burgers</title>
+    <meta charset="utf-8" />
+  </head>
 
-   <body>
+  <body>
     <header>
-       
-        <img src="/img/many.png" id="top">
-         <h1 id="hello">Prince of burgers</h1> <!-- this is how u comment code--> 
+      <img src="/img/many.png" id="top" />
+      <h1 id="hello">Prince of Burgers</h1>
+      <!-- this is how you comment code -->
     </header>
-    
+
     <section id="burger">
-       <h2>Select the burger of your choice</h2> 
-       <p>All of our burgers are made on order from 100% grass fed beef (or wild caught fish)</p>
-       
-        <div class="wrapper">
-            <div class="box a">
-                <h3>The Massive burger</h3>
-                <img src="/img/massive.jpg" alt="massive burger" title="The Massive Burger" style="width:400px">
+      <h2>Select the burger of your choice</h2>
+      <p>
+        All of our burgers are made on order from 100% grass-fed beef (or wild
+        caught fish)
+      </p>
 
-                <ul  class="ingredients">
-                    <li>1kg beef patties</li>
-                    <li>A whole bunch of cheese</li>
-                    <li class="alergens">May or may not contain gluten</li>
-                </ul>
-            </div>
-            
-            <div class="box b">
-                <h3>The fishy burger</h3>
-                <img src="/img/fishy.jpg" alt="fishy burger" title="The Fishy Burger" style="width:400px">
-                <ul  class="ingredients">
-                    <li>Fish of the day</li>
-                    <li>Carrots and stuff</li>
-                    <li class="alergens">Probably contains gluten</li>
-                </ul>
-            </div>
-            
-            <div class="box c">
-                <h3>The plain old burger</h3>
-                <img src="/img/plain.jpg" alt="plain burger" title="The plain old Burger" style="width:400px">
-                <ul class="ingredients">
-                    <li>200g beef patty</li>
-                    <li>One slice of cheese</li>
-                    <li class="alergens">Contains gluten</li>
-                </ul>
-            </div>
+      <div class="wrapper">
+        <div class="box a">
+          <h3>The Massive Burger</h3>
+          <img
+            src="/img/massive.jpg"
+            alt="Massive Burger"
+            title="The Massive Burger"
+            style="width:400px"
+          />
+          <ul class="ingredients">
+            <li>1kg beef patties</li>
+            <li>A whole bunch of cheese</li>
+            <li class="alergens">May or may not contain gluten</li>
+          </ul>
         </div>
-    
-    </section>
-    <section id="delivery">
-        <h2>Delivery details</h2>
-        <p>As of now, we only deliver to adresses in Uppsala, Sweden</p>
-        <form>
-            <p>
-                <label for="fullname">Full Name</label><br>
-                <input type="text" id="fullname" name="fn" required="required" placeholder="First and last name">
-            </p>
-            <p>
-                <label for="email">E-mail</label><br>
-                <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-            </p>
-            <p>
-                <label for="street">Street</label><br>
-                <input type="text" id="street" name="st" required="required" placeholder="Street name">
-            </p>
-            <p>
-                <label for="houseno">House</label><br>
-                <input type="int" id="houseno" name="hono" required="required" placeholder="House number">
-            </p>
 
-            <p>
-                <label for="method">Payment method</label><be><br>
-                <select id="method" name="rcp">
-                    <option>Credit/Debit Card</option>
-                    <option>Swish</option>
-                    <option>Cash (+10% administrative fee)</option>
-                </select>
-             </p>
-             <p>Your gender</p>
-  
-             <input type="radio" id="man" name="gender" value="man">
-             <label for="man">Man</label><br>
-             
-             <input type="radio" id="woman" name="gender" value="woman">
-             <label for="woman">Woman</label><br>
-             
-             <input type="radio" id="Other" name="gender" value="other">
-             <label for="other">Other</label><br>
-             
-             <input type="radio" id="none" name="gender" value="none">
-             <label for="none">None of your business</label><br>
-        </form>
-        <button type="submit">
-            <img src="/img/shop.png" style="width:20px">
-            Place order
-          </button>
+        <div class="box b">
+          <h3>The Fishy Burger</h3>
+          <img
+            src="/img/fishy.jpg"
+            alt="Fishy Burger"
+            title="The Fishy Burger"
+            style="width:400px"
+          />
+          <ul class="ingredients">
+            <li>Fish of the day</li>
+            <li>Carrots and stuff</li>
+            <li class="alergens">Probably contains gluten</li>
+          </ul>
+        </div>
+
+        <div class="box c">
+          <h3>The Plain Old Burger</h3>
+          <img
+            src="/img/plain.jpg"
+            alt="Plain Burger"
+            title="The Plain Old Burger"
+            style="width:400px"
+          />
+          <ul class="ingredients">
+            <li>200g beef patty</li>
+            <li>One slice of cheese</li>
+            <li class="alergens">Contains gluten</li>
+          </ul>
+        </div>
+      </div>
     </section>
-    <hr>
+
+    <section id="delivery">
+      <h2>Delivery Details</h2>
+      <p>As of now, we only deliver to addresses in Uppsala, Sweden.</p>
+      <form>
+        <p>
+          <label for="fullname">Full Name</label><br />
+          <input
+            type="text"
+            id="fullname"
+            name="fn"
+            required="required"
+            placeholder="First and last name"
+          />
+        </p>
+        <p>
+          <label for="email">E-mail</label><br />
+          <input
+            type="email"
+            id="email"
+            name="em"
+            required="required"
+            placeholder="E-mail address"
+          />
+        </p>
+        <p>
+          <label for="street">Street</label><br />
+          <input
+            type="text"
+            id="street"
+            name="st"
+            required="required"
+            placeholder="Street name"
+          />
+        </p>
+        <p>
+          <label for="houseno">House</label><br />
+          <input
+            type="int"
+            id="houseno"
+            name="hono"
+            required="required"
+            placeholder="House number"
+          />
+        </p>
+        <p>
+          <label for="method">Payment Method</label><br />
+          <select id="method" name="rcp">
+            <option>Credit/Debit Card</option>
+            <option>Swish</option>
+            <option>Cash (+10% administrative fee)</option>
+          </select>
+        </p>
+        <p>Your gender</p>
+        <input type="radio" id="man" name="gender" value="man" />
+        <label for="man">Man</label><br />
+
+        <input type="radio" id="woman" name="gender" value="woman" />
+        <label for="woman">Woman</label><br />
+
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label><br />
+
+        <input type="radio" id="none" name="gender" value="none" />
+        <label for="none">None of your business</label><br />
+      </form>
+      <button type="submit">
+        <img src="/img/shop.png" style="width:20px" />
+        Place order
+      </button>
+    </section>
+    <hr />
     <footer>
-        &copy; 2024 Prince Desiderius Burgers AB
+      &copy; 2024 Prince Desiderius Burgers AB
     </footer>
-   </body>
+  </body>
 </html>

@@ -1,19 +1,19 @@
 [{
-    "name": "massive", 
+    "name": "Massive", 
     "kCal": 800, 
     "gluten": true,
     "lactose": true, 
     "image": "/img/massive.jpg"
 },
 {
-    "name": "fishy", 
+    "name": "Fishy", 
     "kCal": 350, 
     "gluten": true,
     "lactose": false, 
     "image": "/img/fishy.jpg"
 },
 {
-    "name": "plain old", 
+    "name": "Royale with Cheese", 
     "kCal": 450, 
     "gluten": true,
     "lactose": true, 
